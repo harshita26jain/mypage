@@ -1,18 +1,30 @@
-import React, { Component } from 'react';
+import { useState } from 'react'
 
-export default class Textarea extends Component {
-    
-    state ={
-        value: "textarea"
-    };
-    handlechange =e=> {
-        this.setState({value: e.target.value})
-    }
-  render() {
-    return <div> 
-        <textarea className="form-control" value={this.state.value} onChange={this.handlechange} rows={8} cols={100}/>
-  
 
-</div>
+export default function Textarea () {
+  const [text, setText] = useState('')
+ 
+  const handleUpperCase = () => {
+    setText(text.toUpperCase())
   }
+  const handleLowerCase = () => {
+    setText(text.toLowerCase())
+  }
+ 
+
+  
+  return (
+    <>
+      <div className='container'>
+        <textarea value={text} onChange={(e) => setText(e.target.value)} />
+      </div>
+      <button className='btn' onClick={handleUpperCase}>
+        UpperCase
+      </button>
+      <button className='btn' onClick={handleLowerCase}>
+        LowerCase
+      </button>
+      
+    </>
+  )
 }
