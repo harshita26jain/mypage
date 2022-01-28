@@ -24,7 +24,7 @@ export default function Textarea () {
       <button className='btn' onClick={handleLowerCase}>
         LowerCase
       </button>
-      
+      <br/>
     </>
   )
 }
