@@ -18,7 +18,7 @@ function UserData(){
 
         </div> 
 
-        <div className="container">
+        <div>
             <div className="row">
                 {
                 data.map((value)=>{
@@ -29,7 +29,7 @@ function UserData(){
                 <div  className="card" style={{width: "18rem"}}>
                 <img src={ value.image}className="card-img-top" alt="..."/>
                 <div className="card-body">
-
+ 
                   <h5 className="card-title">{value.title}</h5>
                      <p className="card-text">{value.description}</p>
                      
